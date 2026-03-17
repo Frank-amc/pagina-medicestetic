@@ -6,11 +6,15 @@
 }
 
 body{
-    background:linear-gradient(rgba(160, 198, 217, 0.7), rgba(0,0,0,0.7)),
-    url("../asset/img/stethoscope-medications-cardiogram.jpg");
-    background-size: 200%;
+    background-color: #62113a;
+    background:linear-gradient(rgba(10, 18, 23, 0.869), rgba(14, 9, 9, 0.983)),
+    url("asset/img/fondo.png.png");
+    background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
+   
+
+    
 }
 
 header{
