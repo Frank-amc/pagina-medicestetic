@@ -278,8 +278,13 @@ align-items:center;
     }
 
     #menu-icon{
-        display: block;
+        display:inline-block; /* esto toma de padding el tamaño del txto*/
+        
     }   
+
+     #menu-icon:hover{
+        background-color:transparent;
+     }
         
     /*imagen del header logo*/
     header img{
