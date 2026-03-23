@@ -218,6 +218,7 @@ h2{
 }
 
 #contacto a{
+    font-size: 25px;
     text-decoration: none;
     color:#5c554d;
 
@@ -225,10 +226,12 @@ h2{
 /*logo del whatsapp de contacto*/
 #whatsapp{
     color: rgb(46, 176, 55);
+    font-size: 30px;
 
 }
 
 #instagram1{
+    font-size: 30px;
     color:#b5235b;
 }
 
@@ -274,26 +277,25 @@ align-items:center;
   
     }
 
-    
-  
-
     #menu-icon{
         display: block;
     }   
         
-   
+    /*imagen del header logo*/
+    header img{
+         width: 120px;
+    }
     
     .navlist{
         position: absolute; /*para que quede el menu por encima de lo demas*/
-        top:100%;
         top: -160%;
-        width: 180px;
-        height: 180px;
-        background-color: #69113849;
+        height: 140px;
+        background-color: #691139ec;
         display:flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding: 30px 20px;
+        padding: 20px 15px;
         transition: all 00,1s ease-in;
     
         
@@ -302,19 +304,34 @@ align-items:center;
 
     .navlist a{
         display: block;
-        margin: 7px 0;
+        margin: 4px 0;
     }
 
     #menu-toggle:checked + label.menu-icon-action + nav{
         top: 100%;
-        right: 37%;
+        width: 100%;
+        display: flex;
+
+    
     }
 
+#video-portada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
 
 
 .hero h2{
 font-size:26px;
 }
+
+.imagen1{
+    display: flex;
+    width: 100%;
+
 
 .servicio{
 width:90%;
