@@ -2,67 +2,146 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    background-color: #62113a;
-    background:linear-gradient(rgba(10, 18, 23, 0.869), rgba(14, 9, 9, 0.983)),
-    url("asset/img/fondo.png.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-   
+    font-family:Arial, Helvetica, sans-serif;
 
     
 }
 
-header{
-    text-align:center;
-    padding:35px;
-    background:#62113a;
-    color: aliceblue;
+.navlist{
+    border: black solid 1px;
+    display:flex;
+    justify-content: center;
+    background-color: #631835e1 ;
+   /* background:linear-gradient(to right, #d6bfa7 1%, #631835, #d6bfa7);*/
+    padding:6px;
+    z-index: 80;
 }
 
-header h1{
-    color:#eae6ca;
-    font-size:45px;
-}
 
-nav{
-    background:#8a2153;
-    text-align:center;
-    padding:15px;
-}
-
-nav a{
-    color:#eae6ca;
+.navlist a {
+    color:white;
     margin:0 20px;
     text-decoration:none;
     font-weight:bold;
+    margin-left: 60px; /*esto es para separar las palabras*/
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;/*este es un subrayado transparente*/
+    transition: all .5s ease; /* este es para animar todas las caracteristicas del .navlist*/
 }
 
-nav a:hover{
-    color:#b6b8be;
-    background-color: #56534c;
-    padding: auto;
+.navlist a:hover {
+    background-color: #9c8e7d75;
+    border-bottom: 2px solid white;/* este es un subrayado blanco que aparecera cuando hagamos hover o estemos sobre el elemento*/
+
 }
+
+#menu-icon{
+    display: none; /*esto siempre va estar en none para que solo se vea cuando la pantalla este colapsada*/
+}
+
+#menu-icon {
+    font-size: 30px;
+    z-index: 101; /* parque este sobre el header*/
+    cursor: pointer; /* cuando estas sobre el elemento coloca una manito para presionar*/
+}
+
+#menu-toggle{
+    display: none; /*nunca quiero que se vea el ckeckbox*/ 
+}
+
+.menu-icon-action{
+    display:none; /*para que no se le puede hacer click*/
+}
+
+
+
+
+
+header{
+    text-align:center;
+    background: linear-gradient(to top, white 10px,  #d6bfa7, #efe0d0);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:sticky;
+    top:0;
+    z-index: 1;
+}
+
+ /*imagen del header logo*/
+header img{
+    width: 250px;
+
+}
+
+/*header h1{
+    color:#631835;
+    font-size:45px;
+    text-align: center;
+}
+ header p{
+    text-align: center;
+ }*/
+
+
+
+body{
+    background:linear-gradient(to right, #5e4f3a3c 1px, #f5e6d3, #5e4f3a3c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+     
+
+}
+
+
+#video-portada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+#inicio{
+    background-color: #d8c3a5;
+
+
+
+}
+
 
 .hero{
     text-align:center;
-    padding:120px 20px;
+    padding:100px 20px;
 }
 
 .hero h2{
-    font-size:40px;
-    color:#eae6ca;
+    font-size:60px;
+    color:#3b3b3b;
     margin-bottom:20px;
+    font-family:inherit;
 }
 
+.hero p {
+    max-width: 70ic;
+    margin: auto;
+    color: black;
+    font-family:'Franklin Gothic Medium', sans-serif, cursive;
+    font-size: 20px;
+    /*background-color: #f7f5ed;*/
+    padding: 30px 30px;
+       
+}
+
+.imagen1{
+    width: 500px;
+
+}
 
 .boton{
     background:#d4af37;
-    color:black;
+    color:#631835;
     padding:10px 15px;
     text-decoration:none;
     border-radius:30px;
@@ -75,17 +154,19 @@ nav a:hover{
 }
 
 section{
-    padding:80px 20px;
+    padding:50px 20px;
     text-align:center;
+
 }
 
 h2{
-    color:#eae6ca;
+    color:#631835;
     margin-bottom:40px;
     font-size:35px;
 }
-
+/* aqui estan los servicios en un box*/
 .contenedor-servicios{
+    background-color: #d8c3a5;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
@@ -93,8 +174,8 @@ h2{
 }
 
 .servicio{
-    background:rgba(0,0,0,0.6);
-    border:2px solid #eae6ca;
+    background:rgba(245, 240, 240, 0.6);
+    border:3px solid #923864;
     padding:25px;
     width:250px;
     border-radius:10px;
@@ -109,10 +190,17 @@ h2{
     margin:auto;
 }
 
+#doctora h2{
+      font-family: "Great Vibes", cursive;
+
+}
+
+
+/*imagen de la profesional*/
 .perfil img{
-    width:200px;
-    border-radius:100%;
-    border:4px solid #eae6ca;
+    width:250px;
+    height: 280px;
+    border:4px solid rgb(249, 205, 205);
     margin-bottom:20px;
 }
 
@@ -129,8 +217,24 @@ h2{
     border:3px solid #eae6ca;
 }
 
+#contacto a{
+    text-decoration: none;
+    color:#5c554d;
+
+}
+/*logo del whatsapp de contacto*/
+#whatsapp{
+    color: rgb(46, 176, 55);
+
+}
+
+#instagram1{
+    color:#b5235b;
+}
+
+
 footer{
-    background:#8a2153;
+    background:#923864;
     padding:20px;
     text-align:center;
 }
@@ -139,13 +243,14 @@ footer{
     position:fixed;
     bottom:20px;
     right:20px;
-    background:#20b757;
+    background:#179746;
     color:white;
     padding:15px 20px;
     border-radius:50px;
     text-decoration:none;
     font-weight:bold;
 }
+
 
 /* tablets */
 @media (max-width:900px){
@@ -158,12 +263,54 @@ align-items:center;
 }
 
 /* celulares */
-@media (max-width:600px){
+@media (max-width:768px){
 
-nav a{
-display:block;
-margin:10px 0;
-}
+    .menu-icon-action{
+        display: block;
+    }   
+
+    .menu-icon-action:active{
+        transform: translateY(2px);  /*direccion del movimiento*/
+  
+    }
+
+    
+  
+
+    #menu-icon{
+        display: block;
+    }   
+        
+   
+    
+    .navlist{
+        position: absolute; /*para que quede el menu por encima de lo demas*/
+        top:100%;
+        top: -160%;
+        width: 180px;
+        height: 180px;
+        background-color: #69113849;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all 00,1s ease-in;
+    
+        
+        
+    }
+
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + nav{
+        top: 100%;
+        right: 37%;
+    }
+
+
 
 .hero h2{
 font-size:26px;
@@ -173,8 +320,6 @@ font-size:26px;
 width:90%;
 }
 
+
+
 }
-
-
-
-
